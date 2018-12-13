@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html onkeydown="return false"oncontextmenu="return false"onselectstart="return false"ondragstart="return false">
+<html lang="tr-TR">
+<head>
+<title>PARDUS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href=https://i.hizliresim.com/rJqjgN.png rel=icon />
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+<style>
+
+html {
+	background: black;
+	color: white;
+	font-family:'Lato';
+}
+
+.bg {
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	opacity:0.7;
+	height:100vh;
+	position:fixed;
+	background-repeat: no-repeat;
+	background:url("http://www.zamanvadisi.com/wp-content/uploads/2015/03/manzara-hd-foto.jpeg");
+}
+
+#txt {font-size: 60px;}
+
+#demo {
+	font-size: 40px;
+}
+
+</style>
+
+</head>
+<body onload="startTime()">
+<center>
+
+<div class="bg"></div>
+
+<div id="txt"></div>
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d.toDateString();
+</script>
+
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  m = checkTime(m);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};
+  return i;
+}
+</script>
+
+<img src="https://www.thecoffee-podshop.com/wp-content/uploads/2016/05/abstract-user-flat-4-2400px.png" style="width: 125px">
+
+<h1>ROOT</h1>
+
+</center>
+</body>
+</html>
